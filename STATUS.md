@@ -1,6 +1,6 @@
 # Status
 
-Intake
+Opgeleverd
 
 ## Opdracht
 Prototype voor nieuwe website van afdeling-ict.nl.
