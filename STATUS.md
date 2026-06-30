@@ -1,9 +1,9 @@
 # Status
 
-Opgeleverd
+Build — Team Atlas (Shaper lead)
 
 ## Opdracht
-Prototype voor nieuwe website van afdeling-ict.nl.
+F-03 Design Pakket voor PRJ-001_afdeling-ict_website is goedgekeurd en de review is afgerond. Builder is nu weer vrij om de volgende stap uit te voeren: staging/publication en finale omgevingsverificatie.
 
 ## Opmerking
-Bronbestanden bevatten nog reviewpunten voor dienstenscope, projecten, contactdetails en privacygegevens.
+Shaper heeft de lokale implementatie inhoudelijk geverifieerd en akkoord gegeven voor de vervolgstap. Implementatie- en publicatiestappen blijven strikt bij Builder.

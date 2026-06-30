@@ -1,47 +1,39 @@
 <!doctype html>
 <html lang="nl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pagina niet gevonden | afdeling-ict.nl</title>
-  <meta name="description" content="De opgevraagde pagina bestaat niet. Ga terug naar de startpagina van afdeling-ict.nl.">
-  <link rel="stylesheet" href="/assets/css/main.css">
-</head>
-<body>
-  <a class="skip-link" href="#content">Ga naar content</a>
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="/">
-        <span class="brand__mark">AI</span>
-        <span class="brand__text"><strong>Afdeling-ICT</strong><span>Prototype</span></span>
-      </a>
-      <nav class="site-nav" aria-label="Hoofdnavigatie">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/over-ons/">Over ons</a></li>
-          <li><a href="/diensten/">Diensten</a></li>
-          <li><a href="/projecten/">Projecten</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="site-shell" id="content">
-    <section class="section">
-      <div class="empty-state">
-        <span class="badge">404</span>
-        <h1>Pagina niet gevonden</h1>
-        <p>De opgevraagde pagina staat niet in dit prototype.</p>
-        <p><a class="button button--primary" href="/">Terug naar home</a></p>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pagina niet gevonden | afdeling-ict.nl</title>
+    <meta name="description" content="De opgevraagde pagina bestaat niet. Ga terug naar de startpagina van afdeling-ict.nl.">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Ga naar content</a>
+    <header class="site-header">
+      <div class="site-shell site-header__inner">
+        <a class="brand" href="index.html" aria-label="afdeling-ict.nl, terug naar homepage">
+          <span class="brand__mark" aria-hidden="true"><span></span></span>
+          <span class="brand__text"><strong>afdeling-ict.nl</strong><span>private AI-infrastructuur</span></span>
+        </a>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="site-shell footer__inner small">
-      <span>Statisch prototype zonder CMS, framework of tracking.</span>
-      <span>Afdeling-ICT · afdeling-ict.nl</span>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main class="site-shell" id="content">
+      <section class="section empty-state" aria-labelledby="not-found-title">
+        <p class="eyebrow">404</p>
+        <h1 id="not-found-title">Pagina niet gevonden</h1>
+        <p>De opgevraagde pagina is niet beschikbaar.</p>
+        <p><a class="button button--primary" href="index.html">Terug naar homepage</a></p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="site-shell footer__inner">
+        <div>
+          <strong>afdeling-ict.nl</strong>
+          <p>Private AI-infrastructuur voor vertrouwelijke organisaties.</p>
+        </div>
+        <p class="footer__aside">Familieherkenning met afdeling.ai.</p>
+      </div>
+    </footer>
+  </body>
 </html>
