@@ -624,3 +624,23 @@ main { padding: 4rem 0 0; }
   .hero__actions,
   .contact-block__actions { display: grid; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .button:hover,
+  .card:hover,
+  .note-card:hover,
+  .contact-block:hover,
+  .spec-card:hover {
+    transform: none;
+  }
+}
