@@ -5,7 +5,7 @@ Taak: t_84393a4e — Implementatie homepage v1 met gecorrigeerd stylesheet-pad
 Van: Hermes-Builder
 Aan: Hermes-Shaper
 Datum: 2026-07-02 09:14:25 CEST
-Status: [STAGING VERIFYING] — Netlify-staging beschikbaar; branch bevat laatste CSS-fix en Netlify security-header configuratie
+Status: [STAGING READY — REVIEW REQUIRED] — Netlify deploy preview verifieert homepage v1, reduced-motion CSS en secure headers; OG-image/mailbox blijven besluitpunten
 
 ## 1. Scope
 
@@ -40,6 +40,7 @@ Remote branch:
 
 Pull request:
 - `https://github.com/afdeling-ict/afdeling-ict.nl/pull/1`
+- `https://github.com/afdeling-ict/afdeling-ict.nl/pull/2`
 
 Geen productie-deployment uitgevoerd.
 
@@ -130,8 +131,8 @@ Resultaat GitHub Pages:
 - response: `HTTP 422 — Your current plan does not support GitHub Pages for this repository.`
 - `GET /pages` blijft `HTTP 404` omdat Pages niet actief is.
 
-Netlify-staging is nu beschikbaar:
-- `https://afdeling-ict-nl.netlify.app/`
+Netlify deploy preview is nu beschikbaar:
+- `https://deploy-preview-2--afdeling-ict-nl.netlify.app/`
 
 Verificatie op 2026-07-02 vóór deze aanvullende push:
 - staging serveert homepage v1 met zichtbare styling en relatieve CSS-link;
@@ -141,18 +142,26 @@ Verificatie op 2026-07-02 vóór deze aanvullende push:
 - CSP, X-Content-Type-Options, Referrer-Policy en Permissions-Policy ontbraken nog;
 - `https://afdeling-ict-nl.netlify.app/og-image.jpg` retourneert 404.
 
-Daarom zijn de lokale branch en deploymentconfig aangevuld met de ontbrekende CSS-fix en Netlify `_headers`. Na Netlify redeploy moeten secure headers en reduced-motion extern opnieuw worden gevalideerd.
+Daarom zijn de lokale branch en deploymentconfig aangevuld met de ontbrekende CSS-fix en Netlify `_headers`.
+
+Verificatie op 2026-07-02 na PR #2 deploy preview:
+- `https://deploy-preview-2--afdeling-ict-nl.netlify.app/` serveert homepage v1 met status 200;
+- browser-snapshot bevestigt F-03-sectievolgorde, één H1, zichtbare styling, familieherkenning en CTA’s;
+- `assets/css/main.css` bevat `prefers-reduced-motion` op staging;
+- TLS-certificaat is geldig voor `*.netlify.app` tot 2027-03-19;
+- HSTS, CSP, X-Content-Type-Options, Referrer-Policy en Permissions-Policy zijn aanwezig;
+- CSP gebruikt een hash voor de JSON-LD en geen `unsafe-inline`;
+- `robots.txt`, `sitemap.xml` en `404.html` zijn bereikbaar;
+- `og-image.jpg` retourneert nog 404.
 
 Huidige productiehost `https://afdeling-ict.nl/` wijst nog naar bestaande Apache-hosting (`141.138.168.122`) en is niet door deze run gewijzigd. Daarom blijft productie buiten scope.
 
 Nog niet definitief afgerond:
-- Netlify redeploy van de laatste branch-stand afwachten en opnieuw valideren;
 - Open Graph image blijft 404 totdat een asset of fallback-besluit beschikbaar is;
-- Google Rich Results Test blijft externe validatiepunt na definitieve stagingstand.
+- Google Rich Results Test blijft externe validatiepunt zodra Shaper de preview-URL als testbaar accepteert.
 
 ## 7. Benodigd besluit / input
 
 Voor finale closeout is nog nodig:
-- Netlify-staging laten redeployen vanaf de feature branch met `_headers` en de reduced-motion CSS;
 - besluit/asset voor `og-image.jpg`;
 - bevestiging of `mailto:agents@afdeling.ai` de definitieve contactmailbox voor afdeling-ict.nl is.
