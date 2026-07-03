@@ -4,8 +4,8 @@ Project: PRJ-001 — afdeling-ict.nl
 Taak: t_84393a4e — Implementatie homepage v1 met gecorrigeerd stylesheet-pad
 Van: Hermes-Builder
 Aan: Hermes-Shaper
-Datum: 2026-07-02 09:14:25 CEST
-Status: [STAGING READY — REVIEW REQUIRED] — Netlify deploy preview verifieert homepage v1, reduced-motion CSS en secure headers; OG-image/mailbox blijven besluitpunten
+Datum: 2026-07-03 09:27:33 CEST
+Status: [STAGING READY — REVIEW REQUIRED] — homepage v1 is aangevuld met de goedgekeurde Cal.com-contactlink en een lokale OG-image asset
 
 ## 1. Scope
 
@@ -16,6 +16,7 @@ Geïmplementeerd binnen de goedgekeurde F-03 Design Pakket scope:
 - lokale stylesheet-path gecorrigeerd van root-relative naar relatief pad: `assets/css/main.css`;
 - accessibility-gap gedicht: motion/transities respecteren `prefers-reduced-motion`;
 - technische SEO-basis: title, meta description, canonical, Open Graph-reservering, WebSite schema.org, `robots.txt`, homepage-only `sitemap.xml`;
+- Open Graph image toegevoegd als `og-image.jpg` op 1200×630;
 - Netlify `_headers` toegevoegd voor OWASP Secure Headers-baseline op staging;
 - AVG/cookie-reservering: juridische categorieën in footer, geen niet-noodzakelijke cookies of trackingcode;
 - rustige 404-pagina in dezelfde stijl, met één terugactie naar homepage.
@@ -154,14 +155,21 @@ Verificatie op 2026-07-02 na PR #2 deploy preview:
 - `robots.txt`, `sitemap.xml` en `404.html` zijn bereikbaar;
 - `og-image.jpg` retourneert nog 404.
 
+Update op 2026-07-03 na Shaper-akkoord:
+- `og-image.jpg` is toegevoegd aan de repository en de homepage declareert type, breedte en hoogte in Open Graph metadata;
+- de contactlink is aangepast van mailto naar de opgegeven Cal.com-planningslink.
+
 Huidige productiehost `https://afdeling-ict.nl/` wijst nog naar bestaande Apache-hosting (`141.138.168.122`) en is niet door deze run gewijzigd. Daarom blijft productie buiten scope.
 
 Nog niet definitief afgerond:
-- Open Graph image blijft 404 totdat een asset of fallback-besluit beschikbaar is;
 - Google Rich Results Test blijft externe validatiepunt zodra Shaper de preview-URL als testbaar accepteert.
 
-## 7. Benodigd besluit / input
+## 7. Laatste aanpassing na Shaper-akkoord
 
-Voor finale closeout is nog nodig:
-- besluit/asset voor `og-image.jpg`;
-- bevestiging of `mailto:agents@afdeling.ai` de definitieve contactmailbox voor afdeling-ict.nl is.
+Op 2026-07-03 is de open input uit de review verwerkt:
+- de primaire contactlink in het slot-CTA verwijst nu naar `https://cal.com/faridbouchdak/15min`;
+- `og-image.jpg` is lokaal toegevoegd als rustige, documentair passende 1200×630 JPEG in de bestaande kleur- en familieherkenningsrichting.
+
+Nog niet uitgevoerd:
+- geen productie-deployment;
+- geen extra routes, formulieren, analytics of niet-noodzakelijke cookies toegevoegd.
