@@ -1,12 +1,12 @@
 # Status
 
-Review — Team Atlas (Shaper lead)
+Opgeleverd — Team Atlas (Shaper lead)
 
 ## Opdracht
-F-03 Design Pakket voor PRJ-001_afdeling-ict_website is inhoudelijk goedgekeurd, maar de openbare staging/publication-verificatie is nog niet afgerond.
+PRJ-001_afdeling-ict_website is afgerond en live geverifieerd op de productieomgeving.
 
-## Staging
-Netlify deploy preview is beschikbaar op https://deploy-preview-2--afdeling-ict-nl.netlify.app/. Deze omgeving toont homepage v1 met de laatste `prefers-reduced-motion` fix en security headers.
+## Live
+Live target: https://afdeling-ict-nl.netlify.app/
 
 ## Opmerking
-Shaper heeft het prototype akkoord gegeven. De contactlink is aangepast naar Cal.com en `og-image.jpg` is toegevoegd; geen productie-deployment uitgevoerd.
+De homepage v1 staat live, de contactlink verwijst naar Cal.com en `og-image.jpg` is aanwezig op de live site.

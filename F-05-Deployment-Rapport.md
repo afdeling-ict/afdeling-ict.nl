@@ -171,5 +171,12 @@ Op 2026-07-03 is de open input uit de review verwerkt:
 - `og-image.jpg` is lokaal toegevoegd als rustige, documentair passende 1200×630 JPEG in de bestaande kleur- en familieherkenningsrichting.
 
 Nog niet uitgevoerd:
-- geen productie-deployment;
 - geen extra routes, formulieren, analytics of niet-noodzakelijke cookies toegevoegd.
+
+## 8. Productie-verificatie
+
+Productie live geverifieerd op `https://afdeling-ict-nl.netlify.app/`:
+- homepage v1 komt overeen met de goedgekeurde preview;
+- contactlink wijst naar Cal.com;
+- `og-image.jpg` is live;
+- STATUS.md staat op `Opgeleverd`.
